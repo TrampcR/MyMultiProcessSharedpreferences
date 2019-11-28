@@ -28,7 +28,7 @@ public class MyContentProvider extends ContentProvider {
         contentvalues.put(EXTRA_VALUE, value);
 
         try {
-            context.getContentResolver().insert(MY_CONTENT_PROVIDER_URI, contentvalues);
+            context.getContentResolver().update(MY_CONTENT_PROVIDER_URI, contentvalues, null, null);
         } catch (Exception e ) {
             e.printStackTrace();
         }
